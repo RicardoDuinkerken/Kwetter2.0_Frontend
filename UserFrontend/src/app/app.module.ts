@@ -15,7 +15,9 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 import {HomeModule} from "./modules/home.module";
 import {SideNavbarModule} from "./modules/side-navbar.module";
-
+import {SignInModule} from "./modules/sign-in.module";
+import {SignUpModule} from "./modules/sign-up.module";
+import {ProfileSetupModule} from "./modules/profile-setup.module";
 
 @NgModule({
   declarations: [
@@ -36,6 +38,9 @@ import {SideNavbarModule} from "./modules/side-navbar.module";
     NoopAnimationsModule,
 
     HomeModule,
+    SignInModule,
+    SignUpModule,
+    ProfileSetupModule,
     SideNavbarModule,
   ],
   providers: [],
