@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TokenStorageService} from "../../services/token-storage.service";
+import {AuthenticationService} from "../../services/Authentication.service";
 
 @Component({
   selector: 'app-side-navbar',
@@ -11,7 +12,7 @@ export class SideNavbarComponent implements OnInit {
   username: string = "John Doe";
   isLoggedIn = false;
 
-  constructor(private tokenStorage: TokenStorageService) {
+  constructor(private tokenStorage: TokenStorageService, private authService: AuthenticationService) {
   }
 
   setDefaultPic() {
@@ -19,9 +20,6 @@ export class SideNavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(this.tokenStorage.getToken()){
-      this.isLoggedIn = true;
-    }
+    this.authService.isLoggedIn.subscribe(res => this.isLoggedIn = res);
   }
-
 }

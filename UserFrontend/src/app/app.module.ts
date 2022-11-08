@@ -18,6 +18,8 @@ import {SideNavbarModule} from "./modules/side-navbar.module";
 import {SignInModule} from "./modules/sign-in.module";
 import {SignUpModule} from "./modules/sign-up.module";
 import {ProfileSetupModule} from "./modules/profile-setup.module";
+import { SignOutComponent } from './components/sign-out/sign-out.component';
+import {SignOutModule} from "./modules/sign-out.module";
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import {ProfileSetupModule} from "./modules/profile-setup.module";
 
     HomeModule,
     SignInModule,
+    SignOutModule,
     SignUpModule,
     ProfileSetupModule,
     SideNavbarModule,
