@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {environment} from '../../environments/environment';
 import {LoginRequest} from "../models/loginRequest";
 import {BehaviorSubject, map} from "rxjs";
+import {RegisterRequest} from "../models/registerRequest";
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +26,8 @@ export class AuthenticationService{
     return this.http.post(environment.authApi + '/login', loginRequest);
   }
 
-  signUp(){
-
+  signUp(registerRequest: RegisterRequest){
+    console.log(registerRequest)
+    return this.http.post(environment.authApi + '/register', registerRequest);
   }
 }
